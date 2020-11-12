@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素</title>
+    <style>
+        /* 
+        为p中第一个字符设置一个特殊的样式
+         */
+        p:first-letter{
+            color: blue;
+            font-size: 50px;
+        }
+        /* 
+        为p中第一个字符设置一个特殊的样式
+         */
+        p:first-line{
+
+        }
+        /* 
+        before表示元素最前边的部分
+        after表示元素最后边的部分
+        一般before都需要要结合content这个样式一起用
+        通过content可以向before或after的位置添加一些内容
+         */
+        p:before{
+            content: "我会出现在整个段落的最前边";
+            color: red;
+        }
+        p:after{
+            content: "我会出现在整个段落的最后边";
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <p>这是一个段落</p>
+</body>
+</html>

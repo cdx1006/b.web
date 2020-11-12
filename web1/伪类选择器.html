@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        /* 
+        :link
+        表示普通的链接（没访问过的链接）
+         */
+        a:link{
+            color: green;
+        }
+        /* 
+        :visited
+        表示访问过的链接
+         */
+        a:visited{
+            color: red;
+        }
+        /* 
+        :hover
+        表示鼠标移入的状态
+         */
+        a:hover{
+            color: yellow;
+        }
+        /* 
+        :active
+        表示被点击的状态
+         */
+        a:active{
+            color: turquoise;
+        }
+    </style>
+</head>
+<body>
+    <a href="www.baidu.com">这是一个超链接</a>
+    <br>
+    <a href="https://www.baidu.com">百度官网</a>
+    <br>
+    <a href="https://www.taobao.com">淘宝</a>
+</body>
+</html>
