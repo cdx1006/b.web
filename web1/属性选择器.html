@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    <style>
+        p[title="hello"]{
+            background-color: yellow;
+        }
+        p[title^="a"]{
+            background-color: pink;
+        }
+        p[title$="c"]{
+            font-size: 25px;
+        }
+        p[title*="c"]{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        title属性，这个属性可以给任何标签使用
+        当鼠标移到元素上时，元素中的title属性值将会作为提示文字显示
+    -->
+    <!-- [属性名] 选取含有指定属性的元素
+        [属性名="属性值"] 选取含有指定属性的元素
+        [属性名^="属性值"] 选取属性值以指定内容开头的元素
+        [属性名$="属性值"] 选取属性值以指定内容结尾的元素
+        [属性名*="属性值"] 选取属性值含指定内容的元素
+    -->
+
+    <p title="hello">我是一个段落</p>
+    <p title="hello">我是一个段落</p>
+    <p title="abc">我是一个段落</p>
+    <p title="abcc">我是一个段落</p>
+    <p title="abcd">我是一个段落</p>
+    <p title="abd">我是一个段落</p>
+</body>
+</html>
