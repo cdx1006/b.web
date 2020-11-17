@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择指定类型的子元素</title>
+    <style>
+        /* :first-of-type
+        :last-of-type
+        :nth-of-type()
+        和:first-child这些非常类似
+        只不过:first-child这些是在所有的子元素中排列
+        而:first-of-type这些是在当前类型的子元素中排列
+         */
+    p:first-of-type{
+        background-color: yellow;
+    }
+    p:last-of-type{
+        background-color: red;
+    }
+    p:nth-of-type(3){
+        background-color: blue;
+    }
+    P:nth-of-type(even){
+        font-size: large;
+    }
+    </style>
+</head>
+<body>
+    <span>我是一个span标签</span>
+    <p>我是一个p标签</p>
+    <p>我是一个p标签</p>
+    <p>我是一个p标签</p>
+    <p>我是一个p标签</p>
+    <p>我是一个p标签</p>
+    <p>我是一个p标签</p> 
+    <p>我是一个p标签</p>
+    <span>我是一个span标签</span>
+</body>
+</html>

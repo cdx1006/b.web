@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 使用时需要用div包裹起来，形成闭合区间 */
+        /* :first-child 可以选中第一个子元素
+        */
+        /*:last-child   可以选中最后一个子元素
+        */
+        /*:nth-child()  可以选中任意位置子的元素
+        该选择器后面可以写一个参数，指定要选中第几个子元素
+        even    表示偶数位置的子元素
+        odd     表示奇数位置的子元素
+        */
+        
+        p:first-child{
+            background-color: yellow;
+        }
+        p:last-child{
+            background-color: red;
+        }
+        p:nth-child(3){
+            background-color: blue;
+        }
+        p:nth-child(even){
+            font-size: large;
+        }
+        span:first-child{
+            background-color: purple
+        }
+        div div  span:nth-child(2){
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- <span>我是一个span标签</span> -->
+        <p>我是一个p标签</p>
+        <span>我是一个span标签</span>
+        <p>我是一个p标签</p>
+        <p>我是一个p标签</p>
+        <p>我是一个p标签</p>
+        <p>我是一个p标签</p>
+        <span>我是一个span标签</span>
+        <div>
+            <span>我是一个span标签</span>
+            <span>我是一个span标签</span>    
+        </div>
+        <p>我是一个p标签</p> 
+        <p>我是一个p标签</p>
+    </div>
+</body>
+</html>
