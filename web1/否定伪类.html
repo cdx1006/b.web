@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>否定伪类</title>
+    <style>
+        /* 否定伪类：
+        作用：可以从已选中的元素中剔除某些元素
+        语法：
+            :not(选择器) 
+        */
+        p:not(.hello){
+            background-color: yellow;
+        }
+        span:not(#span1){
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <span>span1</span>
+    <span id="span1">span2</span>
+    <span>span3</span>
+    <p>我是一个p标签</p>
+    <p>我是一个p标签</p>
+    <p class="hello">我是一个p标签</p>
+    <p>我是一个p标签</p>
+    <p class="hello">我是一个p标签</p>
+    <p>我是一个p标签</p>
+    <p>我是一个p标签</p>
+</body>
+</html>

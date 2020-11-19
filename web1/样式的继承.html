@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>样式的继承</title>
+    <style>
+        /* 可以将一些基本样式设置给祖先元素，后代将会自动继承这些样式
+        但并不是所有的样式都会被子元素继承，如：背景、边框、定位相关的样式不会被继承
+        */
+        div{
+            font-size: 30px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>样式的继承
+            <p>p标签1</p>
+            <span>span标签</span>
+    </div>
+    <p>p标签2</p>
+</body>
+</html>
