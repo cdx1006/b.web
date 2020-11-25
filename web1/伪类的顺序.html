@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类的顺序</title>
+    <style>
+         /* 涉及到a的伪类有四个：
+         :link
+         :visited
+         :hover
+         :active
+         而这四个选择器的优先级是一样的 */
+
+        /* 这四个选择器的顺序：
+        :link
+        :visited
+        :hover
+        :active
+
+        :link 和 :visited没有顺序区分且在 :hover 和 :active前面，
+        否则鼠标移入时的样式（:hover）、点击时的样式（:active）将会被:link 和 :visited样式覆盖掉而无法显示
+
+        :hover 在 :active前面，
+        否则鼠标点击时的样式（:active）将会被鼠标移入时的样式（:hover）覆盖掉而无法显示
+
+         */
+
+        /* 
+        :link
+        表示普通的链接（没访问过的链接）
+         */
+         a:link{
+            color :yellowgreen;
+        }
+        /* 
+        :visited
+        表示访问过的链接
+         */
+        a:visited{
+            color: red;
+        }
+        /* 
+        :hover
+        表示鼠标移入的状态
+         */
+        a:hover{
+            color: orange;
+        }
+        /* 
+        :active
+        表示被点击的状态
+         */
+        a:active{
+            color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.baidu.com">访问过的链接</a>
+    <br>
+    <a href="www.baidu.com">没有访问过的链接</a>
+</body>
+</html>
